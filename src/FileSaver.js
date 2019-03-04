@@ -151,7 +151,7 @@ var saveAs = _global.saveAs || (
       var URL = _global.URL || _global.webkitURL
       var url = URL.createObjectURL(blob)
       if (popup) popup.location = url
-      else location.href = url
+      else top.location.href = url
       popup = null // reverse-tabnabbing #460
       setTimeout(function () { URL.revokeObjectURL(url) }, 4E4) // 40s
     }
